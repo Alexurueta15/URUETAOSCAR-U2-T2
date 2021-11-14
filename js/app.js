@@ -1,5 +1,4 @@
-let contextSW = 'URUETAOSCAR-U2-T2/sw.js';
-let url = window.location.href;
+let contextSW = '/sw.js';
 
 let player = document.getElementById('player');
 
@@ -53,7 +52,6 @@ btnPhoto.addEventListener('click', () => {
 });
 
 if (navigator.serviceWorker) {
-    if (url.includes('localhost')) contextSW = '/sw.js';
     navigator.serviceWorker.register(contextSW);
 }
 
