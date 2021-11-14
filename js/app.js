@@ -1,4 +1,5 @@
-let contextSW = 'URUETAOSCAR-U2-T2/sw.js';
+const contextSW =
+    window.location.href.includes("localhost") ? "/sw.js" : "/" + window.location.href.split('/', 4)[3] + "/sw.js";
 let url = window.location.href;
 
 let player = document.getElementById('player');
